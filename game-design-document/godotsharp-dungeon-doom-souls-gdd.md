@@ -17,6 +17,13 @@ Logo:
 ### Game Summary Pitch
 ### Inspiration
 ### Player Experience
+*How will the player feel when playing the game?*
+This will depend completely on the role you want to play, Currently there are 4 main roles but you can completely redefine your initial role depending on the weapons/armor/skills you find and the way you spend you level up points. For example you may play as a Swordsman and you may spec into having a big ass sword or you can spec into parrying with daggers. You may even level in arcane as a swordsman and be able to use mage spells (for example basic fire and healing spells).
+You're initial class does however play a major role in shaping your build, especially early game.
+- Shooter
+- Swordsman
+- Mage
+- Tank
 ### Platform
 ### Development Software
 ### Genre
