@@ -13,6 +13,14 @@ Date: 2024-08-14 - 2024-??-??
 
 Logo:
 
+This could eventually be published as a website
+
+Maybe incorporate chatgpt intergration to help with creating custom terrain generation and different bigginer loot depending on the player's custom story. Could be done by modyging different weights related to frost, lava, water, dungeons, etc... and by simply increases some a lot, some a little, and some not we could get kinda custom terrain generation maybe a lore accurate item???
+
+I want to incorporate general attack1, attack2, dodge, etc... in code but with potentially completely different effect and animations depending on the weapon and armor the player is wearing. This will allow for a lot of customization and replayability. for example one players dodge may be a dark souls type dodge while for another it might be a full on dash or even tracer style tp-dash.
+
+https://www.youtube.com/watch?v=drCnFueS4og&pp=ygUNcHJpbWFnZW4gZ2FtZQ%3D%3D
+
 ## Introduction
 ### Game Summary Pitch
 ### Inspiration
@@ -90,7 +98,26 @@ You're initial class does however play a major role in shaping your build, espec
   - [Game Flow](dds-game-flow.md)
   - [Game Progression](dds-game-progression.md)
 - [Technical](dds-technical.md) // Include global variables sush as gravity, or time_scale
+  - Programming Style
+    - Will use "TODO:", "FIXME:", "NOTE:", "HACK:", "BUG:"
+      - NOTE: for important or useful information about the code, function, or system that should be known especially if you're working on it (That may not initially be obvious, such as weird quirks or things that are done in a certain way for a specific reason)
+      - TODO: for things that need/should be done but aren't critical (at least not yet...)
+      - FIXME: for things that are broken and need to be urgently fixed asap
+      - BUG: for things that are broken but not urgent to fix (yet...)
+      - HACK: for things that are done in a way that is not optimal or ideal but works (at least for now)
+  - [Tools](dds-tools.md)
+    - [Game Engine](dds-game-engine.md) // Godot
+    - Programming Language: C#
+    - Version Control: Git & GitHub
+    - Development Environment: NeoVim
+    - Modeling: Blender, Blockbench (NOTE: Blockbench has a Gif recording functionality under View > Record Gif and they have on option to use a pixilate shader which i should copy for my game, maybe look for an acerola video?)
+    - Texturing: Photopea
+    - Audio: Audacity
+    - Music: Ableton Live
+    - Video Editing (Dev Logs and Trailers): Shotcut
   - [Mobs](dds-mobs.md)
+    - [Damage System](dds-damage-system.md)
+      - There is a Damage struct that contains a dictionary of damage types and their corresponding damage values (e.g. Physical : 10, Fire : 5, etc...) called a DamageTable and a damage type. The weapon passes a copy of that damage object to the owner mob's Attack() in which any effects the owner mob has active such as temporarily doubling physical attack damage for example with be applied on the Damages.m_DamageTable and whatever else needs to be applied, then the Damage object with the potentially modified values is passed to the targetMobs TakeDamage() by reference in order to save memory and finally, any of the mob's effects are applied and the damage is finnally taken.
     - [Physics](dds-physics.md)
     - [Attribute_System](dds-attribute-system.md)
     - [Stats_System](dds-stats-system.md)
@@ -126,7 +153,7 @@ You're initial class does however play a major role in shaping your build, espec
   - [Input System](dds-input-system.md)
   - [Game Engine](dds-game-engine.md)
   - [Programming Language](dds-programming-language.md)
-  - [Networking](dds-networking.md)
+  - [Multiplayer Networking](dds-multiplayer-networking.md)
   - [Graphics](dds-art-style-graphics.md)
     - [Post Processing](dds-art-style-post-processing.md)
       - [Dithering]() // TODO: add as a link to ##Dithering in post-processing.md (lookup Acerola YT video)
@@ -140,8 +167,12 @@ You're initial class does however play a major role in shaping your build, espec
 - [Development Timeline](dds-dev-timeline.md)
 - [Marketing](dds-marketing.md)
   - [Social Media](dds-social-media.md)
+    - [YouTube](dds-youtube.md)
+      - [Dev Logs](dds-dev-logs.md)
   - [Community Engagement](dds-community-engagement.md)
   - [Press Kit](dds-press-kit.md)
   - [Game Trailer](dds-game-trailer.md)
+    - Have cinematic and bombastic exciting gameplay in the first trailer
+    - Have a seperate Mechanics overview trailer we we show off movement, combat, the world, and the different areas, etc... in a longer slower paced video.
   - [Game Demo](dds-game-demo.md) // First demo will have no multiplayer prob
   - [Monetization](dds-monetization.md)
